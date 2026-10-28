@@ -1,0 +1,82 @@
+/* Pengaturan dasar halaman */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #243047;
+    background-color: #f3f6fb;
+}
+
+/* Header dan Navbar menggunakan Flexbox */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background-color: #173b70;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Area konten */
+main {
+    width: min(100% - 32px, 1200px);
+    margin: 32px auto;
+}
+
+section,
+article {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* CSS Grid untuk empat kartu berita */
+.berita-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 20px;
+}
+
+/* Footer menggunakan Flexbox */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #173b70;
+    color: white;
+    text-align: center;
+}
+
+/* Tampilan pada layar kecil */
+@media (max-width: 600px) {
+    header {
+        padding: 16px;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+
+    main {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+    }
+}
